@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <EditText
+        android:id="@+id/cidian_output"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#474747"
+        android:enabled="false"/>
+    <EditText
+        android:id="@+id/cidian_input"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="请输入您要查询的单词"
+        android:background="#AAAAAA"/>
+    <Button
+        android:id="@+id/cidian_chaxun"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="查询"/>
+
+
+</LinearLayout>

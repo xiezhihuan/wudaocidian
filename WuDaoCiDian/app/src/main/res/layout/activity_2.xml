@@ -88,6 +88,7 @@
                     />
             </LinearLayout>
             <LinearLayout
+                android:id="@+id/bt_gaozhong"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -130,6 +131,7 @@
             android:orientation="horizontal"
             android:layout_marginLeft="34dp">
             <LinearLayout
+                android:id="@+id/bt_cidian"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -141,10 +143,10 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="辅导班"
+                    android:text="词典"
                     android:textSize="18sp"
                     android:textColor="#474747"
-                    android:layout_marginLeft="0dp"
+                    android:layout_marginLeft="4dp"
                     />
             </LinearLayout>
             <LinearLayout

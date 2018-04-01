@@ -1,5 +1,9 @@
 package com.example.myapplication;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -12,6 +16,12 @@ import java.net.URLConnection;
  */
 
 public class Http {
+    //全局的静态变量
+    static String src;
+    static String dst;
+
+
+
     /**
      * 向指定URL发送GET方法的请求
      *
@@ -113,4 +123,48 @@ public class Http {
         return result;
     }
 
+    //JSON解析
+    /**
+     * JSON-->纯对象(Object)的解析
+     *
+     * 注：我们在eclipse里面操作JSON解析的时候需要第三方jar包的支持
+     * @author sKy°
+     * @date 2016-5-8
+     * @version 1.0
+     */
+    private static final String TAG = "Http";
+    public static void parse(String s) {
+//      编辑一个我们要解析的数据对象
+//     根据JSON的官方定义，键，加"",值，如果是字符串，就加""，其他不加。
+        String json=s;
+
+       // JSONObject jsonObject;
+
+        try {
+//          创建JSON解析对象 传入“需要解析的数据”
+            JSONObject obj = new JSONObject(json);
+//          获取“数据”中的“to”
+            String name = obj.getString("to");
+//          获取“数据”中的数组“trans_result”
+            JSONArray jsonArray_trans_result = obj.getJSONArray("trans_result");
+//          从数组“trans_result”中获取JSONObject对象{"src":"good","dst":"\u597d\u7684"}
+            JSONObject trans_result_array= jsonArray_trans_result.getJSONObject(0);
+   //最终要的结果
+            //原文
+            src = trans_result_array.getString("src");
+            //译文
+            dst = trans_result_array.getString("dst");
+            System.out.print("xzh：输出文字"+src);
+
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+
 }
+
+
+

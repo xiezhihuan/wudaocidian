@@ -137,7 +137,7 @@ public class Activity1 extends Activity {
         client.connect();
         AppIndex.AppIndexApi.start(client, getIndexApiAction());
     }
-
+    
     @Override
     public void onStop() {
         super.onStop();

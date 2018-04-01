@@ -85,6 +85,29 @@ public class Activity2 extends AppCompatActivity {
                 return true;
             }
         });
+
+        //注册“高中”的点击事件
+        LinearLayout bt_gaozhong = (LinearLayout) findViewById(R.id.bt_gaozhong);
+        bt_gaozhong.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //显式的页面跳转
+                Intent intent = new Intent(Activity2.this,Gaozhong.class);
+                startActivity(intent);
+
+
+            }
+        });
+
+        //注册“词典”的点击
+        LinearLayout bt_cidian= (LinearLayout) findViewById(R.id.bt_cidian);
+        bt_cidian.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Activity2.this,Cidian.class);
+                startActivity(intent);
+            }
+        });
     }
 
 }

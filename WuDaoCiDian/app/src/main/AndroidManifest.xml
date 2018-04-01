@@ -21,6 +21,8 @@
         <activity android:name=".Activity3" />
         <activity android:name=".ZhuCeYe"/>
         <activity android:name=".Signin_yanzhengye"/>
+        <activity android:name=".Gaozhong"/>
+        <activity android:name=".Cidian"/>
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
